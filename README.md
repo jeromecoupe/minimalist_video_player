@@ -8,4 +8,4 @@ Test for a minimal video player for Vimeo et and Youtube
 - allow for custom responsive cover image
 - uses JS modules and `template` support as cut the mustard test
 
-[Demo on Netlify](https://minvideoplayer.netlify.app)
+[Demo on Netlify](https://minimalvideoplayer.netlify.app)
