@@ -1,6 +1,6 @@
-# Simple video player
+# Minimal video player
 
-Test for a simple video player for Vimeo et and Youtube
+Test for a minimal video player for Vimeo et and Youtube
 
 - Does not load `iframe` with initial page load
 - allows for multiple players on the same page
@@ -8,4 +8,4 @@ Test for a simple video player for Vimeo et and Youtube
 - allow for custom responsive cover image
 - uses JS modules and `template` support as cut the mustard test
 
-[Demo on Netlify](https://smallvideoplayer.netlify.app)
+[Demo on Netlify](https://minvideoplayer.netlify.app)
