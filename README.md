@@ -1,11 +1,11 @@
 # Minimal video player
 
-Test for a minimal video player for Vimeo et and Youtube
+Test for a minimal video player for Vimeo, Youtube or any other video services using iframes.
 
 - Does not load `iframe` with initial page load
 - allows for multiple players on the same page
-- falls back to a link to video page on Vimeo or Youtube
-- allow for custom responsive cover image
+- progressively enhances a link to a video wrapped around an image
 - uses JS modules and `template` support as cut the mustard test
+- allow for custom responsive cover image and play button
 
-[Demo on Netlify](https://minimalvideoplayer.netlify.app)
+Check the [demo on Netlify](https://minimalvideoplayer.netlify.app)
