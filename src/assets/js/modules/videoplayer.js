@@ -3,7 +3,15 @@ const SELECTORS = {
   player: ".js-videoplayer",
   placeholder: ".js-videoplaceholder",
   link: ".js-videolink",
-  template: ".js-videotemplate"
+  template: ".js-videotemplate",
+};
+
+/**
+ * Check if HTML templates are supprted
+ * @returns
+ */
+function supportsTemplate() {
+  return "content" in document.createElement("template");
 }
 
 /**
@@ -21,14 +29,6 @@ function getIframeSrc(videoService, videoId) {
     iframeSrc = `https://player.vimeo.com/video/${videoId}?color=e76c34&title=0&byline=0&portrait=0&autoplay=1`;
   }
   return iframeSrc;
-}
-
-/**
- * Check if HTML templates are supprted
- * @returns
- */
-function supportsTemplate() {
-  return "content" in document.createElement("template");
 }
 
 /**
