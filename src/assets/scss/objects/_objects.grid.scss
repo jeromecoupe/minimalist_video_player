@@ -1,0 +1,62 @@
+/* --------------------------------
+settings
+-------------------------------- */
+$grid-gap: calc(36 / 16 * 1rem);
+
+/* --------------------------------
+base classes
+-------------------------------- */
+.o-grid {
+  list-style: none;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $grid-gap;
+}
+
+.o-grid--2cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.o-grid--3cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.o-grid--4cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* --------------------------------
+rwd classes
+-------------------------------- */
+
+@media all and (min-width: 750px) {
+  .o-grid--2cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .o-grid--3cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .o-grid--4cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .o-grid--2cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .o-grid--3cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .o-grid--4cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
