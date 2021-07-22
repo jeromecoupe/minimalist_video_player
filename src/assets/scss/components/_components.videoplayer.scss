@@ -4,11 +4,16 @@ videoplayer
 
 .c-videoplayer {
   position: relative;
-  padding-top: 56.25%;
   background-color: black;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+
+  @supports not (aspect-ratio: 16 / 9) {
+    padding-top: 56.25%;
+  }
 }
 
-.c-videoplayer__placeholder,
+.c-videoplayer__link,
 .c-videoplayer > iframe {
   border: none;
   position: absolute;
@@ -16,14 +21,6 @@ videoplayer
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.c-videoplayer__link {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #000000;
 }
 
 .c-videoplayer__link::after {

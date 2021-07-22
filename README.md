@@ -2,7 +2,7 @@
 
 Test for a minimal video player for Vimeo, Youtube or any other video services using iframes.
 
-- Does not load `iframe` with initial page load
+- does not load `iframe` elements during initial page load
 - allows for multiple players on the same page
 - progressively enhances a link to a video wrapped around an image
 - uses JS modules and `template` support as cut the mustard test

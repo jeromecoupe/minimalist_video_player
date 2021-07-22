@@ -1,14 +1,15 @@
-// selectors
+/**
+ * CSS selectors
+ */
 const SELECTORS = {
-  player: ".js-videoplayer",
-  placeholder: ".js-videoplaceholder",
-  link: ".js-videolink",
-  template: ".js-videotemplate",
+  player: ".js-video-player",
+  link: ".js-video-link",
+  template: ".js-video-template",
 };
 
 /**
  * Check if HTML templates are supprted
- * @returns
+ * @returns {Boolean} is template tag supported
  */
 function supportsTemplate() {
   return "content" in document.createElement("template");
@@ -43,7 +44,7 @@ function init() {
   }
 
   // get all players
-  const players = Array.from(document.querySelectorAll(SELECTORS.player));
+  const players = document.querySelectorAll(SELECTORS.player);
 
   // loop through players
   players.forEach((player) => {
@@ -55,20 +56,21 @@ function init() {
     if (service !== "youtube" && service !== "vimeo") return;
     if (!id) return;
 
-    // load iframe template
-    const template = player.querySelector(SELECTORS.template);
-    const templateContent = document.importNode(template.content, true);
-
     // prepare iframe src and check
     const iframeSrc = getIframeSrc(service, id);
     if (iframeSrc === "") return;
 
-    // add src to iframe
+    // get and import template
+    const template = player.querySelector(SELECTORS.template);
+    const templateContent = document.importNode(template.content, true);
+
+    // get iframe
     const iframe = templateContent.querySelector("iframe");
+
+    // add src to iframe
     iframe.src = iframeSrc;
 
-    // get link and placeholder
-    const placeholder = player.querySelector(SELECTORS.placeholder);
+    // get link
     const link = player.querySelector(SELECTORS.link);
 
     // when link is clicked,
@@ -77,7 +79,7 @@ function init() {
       "click",
       function (event) {
         event.preventDefault();
-        placeholder.replaceWith(templateContent);
+        link.replaceWith(templateContent);
       },
       false
     );
