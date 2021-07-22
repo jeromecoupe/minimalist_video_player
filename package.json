@@ -8,7 +8,7 @@
     "scripts:dev": "esbuild \"src/assets/js/main.js\" --bundle --sourcemap --outfile=\"dist/assets/js/main.bundle.js\"",
     "styles:prod": "sass --no-source-map --style=compressed src/assets/scss/main.scss dist/assets/css/main.css",
     "styles:dev": "sass --source-map --embed-source-map --source-map-urls=absolute ./src/assets/scss/main.scss dist/assets/css/main.css",
-    "server": "browser-sync start --server \"dist/\" --ignore \"./node_modules/**/*\" --files \"dist/\"",
+    "server": "browser-sync start --server \"dist/\" --ignore \"./node_modules/**/*\" --files \"dist/\" --no-open",
     "copy:images": "copyfiles -u 1 \"src/assets/img/**/*\" \"dist/\"",
     "copy:html": "copyfiles -u 1 \"src/index.html\" \"dist/\"",
     "copy": "npm-run-all --parallel copy:*",
